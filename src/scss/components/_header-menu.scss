@@ -1,0 +1,38 @@
+.header {
+	min-height: 70px;
+	box-shadow: 0px 1px 5px rgb(195, 195, 195);
+	border-bottom: 1px solid rgb(195, 195, 195);
+	&__menu {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		min-height: 70px;
+	}
+	&__menu-link {
+		position: relative;
+		font-size: 20px;
+		margin-left: 10%;
+		text-transform: lowercase;
+		font-weight: 800;
+		opacity: 0.6;
+		&::after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top: 30px;
+			height: 2px;
+			width: 0;
+			background-color: #000;
+			transition: width 0.3s ease-out;
+		}
+		&:hover:after {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 680px) {
+			display: none;
+		}
+	}
+}

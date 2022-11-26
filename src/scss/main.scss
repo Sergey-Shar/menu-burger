@@ -1,1 +1,5 @@
-@import '../scss/config/config'
+@import './fonts';
+@import "../scss/reset";
+@import "../scss/components/container";
+@import "../scss/components/header-menu";
+@import "../scss/components/menu-toggle";
