@@ -1,3 +1,3 @@
-# parcel-deploy
+menu-burger
 
- https://sergey-shar.github.io/parcel-deploy/
+https://sergey-shar.github.io/menu-burger/
