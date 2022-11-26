@@ -1,0 +1,22 @@
+{
+  "name": "parcel-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://nameaccount.github.io/namerepository",
+  "scripts": {
+    "dev":"parcel ./public/index.html --open",
+    "build":"parcel build ./public/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
