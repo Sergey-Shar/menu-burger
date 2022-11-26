@@ -2,11 +2,10 @@
   "name": "parcel-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "homepage": "https://nameaccount.github.io/namerepository",
+  "homepage": "https://sergey-shar.github.io/parcel-deploy/",
   "scripts": {
-    "dev":"parcel ./public/index.html --open",
-    "build":"parcel build ./public/index.html",
+    "dev": "parcel ./public/index.html --open",
+    "build": "parcel build ./public/index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -14,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0"
   },
   "dependencies": {
