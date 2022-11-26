@@ -5,7 +5,7 @@
   "homepage": "https://sergey-shar.github.io/parcel-deploy/",
   "scripts": {
     "dev": "parcel ./public/index.html --open",
-    "build": "parcel build ./public/index.html",
+    "build": "parcel build ./public/index.html --dist-dir build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
