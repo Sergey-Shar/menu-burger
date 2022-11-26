@@ -25,6 +25,7 @@
 			height: 2px;
 			width: 0;
 			background-color: #000;
+            opacity: 0.6;
 			transition: width 0.3s ease-out;
 		}
 		&:hover:after {
