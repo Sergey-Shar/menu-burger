@@ -43,12 +43,12 @@
 	// Поворачиваем на 45 градусов при клике
 	&.active::before {
 		transform: rotate(45deg);
-		top: 0.9rem;
+		top: 1rem;
 	}
 	// Поворачиваем на 45 градусов при клике
 	&.active::after {
 		transform: rotate(-45deg);
-		bottom: 0.9rem;
+		bottom: 1rem;
 	}
 	// Скрываем среднюю полоску при клике
 	&.active span {
