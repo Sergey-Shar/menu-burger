@@ -27,8 +27,11 @@ button {
 }
 
 .header {
+  width: 100%;
+  z-index: 10000;
   min-height: 70px;
   background-color: #202329;
+  position: relative;
 }
 
 .header__menu {
@@ -36,13 +39,31 @@ button {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  position: relative;
 }
 
 .header__menu-box {
   width: 100%;
   justify-content: flex-end;
   display: flex;
+}
+
+@media screen and (max-width: 680px) {
+  .header__menu-box {
+    z-index: -10;
+    width: 100%;
+    background-color: #202329;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all .3s;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    transform: translateX(550px);
+  }
+}
+
+.header__menu-box.active {
+  transform: translateY(0);
 }
 
 .header__menu-link {
@@ -71,13 +92,19 @@ button {
   color: #61d9fb;
 }
 
+@media screen and (max-width: 680px) {
+  .header__menu-link:hover:after {
+    width: 0;
+  }
+}
+
 .header__menu-link:hover {
   color: #61d9fb;
 }
 
 @media screen and (max-width: 680px) {
   .header__menu-link {
-    display: none;
+    margin: 20px 15px;
   }
 }
 

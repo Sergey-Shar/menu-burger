@@ -1,8 +1,10 @@
 .header {
+	position: relative;
+	width: 100%;
+	z-index: 10000;
 	min-height: 70px;
 	background-color: rgb(32, 35, 41);
 	&__menu {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -12,6 +14,21 @@
 		display: flex;
 		justify-content: flex-end;
 		width: 100%;
+		@media screen and (max-width: 680px) {
+			position: fixed;
+			top: 70px;
+			z-index: -10;
+			right: 0;
+			flex-direction: column;
+			align-items: flex-end;
+			width: 100%;
+			background-color: rgb(32, 35, 41);
+			transform: translateX(550px);
+			transition: all 0.3s ease 0s;
+		}
+		&.active {
+			transform: translateY(0px);
+		}
 	}
 	&__menu-link {
 		position: relative;
@@ -34,13 +51,15 @@
 		&:hover:after {
 			width: 100%;
 			color: rgb(97, 217, 251);
+			@media screen and (max-width: 680px) {
+				width: 0;
+			}
 		}
 		&:hover {
 			color: rgb(97, 217, 251);
 		}
-
 		@media screen and (max-width: 680px) {
-			display: none;
+			margin: 20px 15px;
 		}
 	}
 }
