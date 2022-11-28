@@ -15,19 +15,20 @@
 		justify-content: flex-end;
 		width: 100%;
 		@media screen and (max-width: 680px) {
-			position: fixed;
+			position: absolute;
+			height: 0;
 			top: 70px;
-			z-index: -10;
 			right: 0;
+			overflow: hidden;
 			flex-direction: column;
 			align-items: flex-end;
 			width: 100%;
 			background-color: rgb(32, 35, 41);
-			transform: translateX(550px);
-			transition: all 0.3s ease 0s;
+			transition: height 0.5s linear;
 		}
 		&.active {
-			transform: translateY(0px);
+			height: 250px;
+			transition: height 0.5s linear;
 		}
 	}
 	&__menu-link {
